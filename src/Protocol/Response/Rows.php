@@ -62,7 +62,7 @@ class Rows implements \Iterator, \Countable {
 				$data = new DataStream($this->rows[$this->current][$this->columns[$i]['name']]);
 				$row[$this->columns[$i]['name']] = $data->readByType($this->columns[$i]['type']);
 			} catch (\Exception $e) {
-				trigger_error($e->getMessage());
+				// trigger_error($e->getMessage());
 				$row[$this->columns[$i]['name']] = null;
 			}
 		}
